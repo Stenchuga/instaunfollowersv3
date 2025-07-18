@@ -2,9 +2,17 @@ import json
 import io
 import zipfile
 import streamlit as st
+st.markdown("""
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 import matplotlib.pyplot as plt
 
 # Funkcije za ucitavanje username-a iz podataka JSON struktura
+
 def load_usernames_following_from_data(data):
     usernames = set()
     for entry in data.get("relationships_following", []):
