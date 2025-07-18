@@ -9,6 +9,10 @@ st.markdown("""
     header {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
+st.set_page_config(
+    page_title="IG Unfollowers",  # <-- Ovo će pisati u tabu browsera
+    page_icon="📉"                # <-- Ovo će biti ikonica u tabu (favicon)
+)
 import matplotlib.pyplot as plt
 
 # Funkcije za ucitavanje username-a iz podataka JSON struktura
